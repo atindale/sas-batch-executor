@@ -1,0 +1,5 @@
+# This is Job1
+#
+SCHEDULE:AM:WEEKLY_1
+Job1\first_program.sas
+Job1\second_program.sas

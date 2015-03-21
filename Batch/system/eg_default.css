@@ -1,0 +1,657 @@
+.EGBanner {
+	background-image: url(startbanner.gif);
+}
+.ContentTitle{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #002288;
+	font-style: italic;
+}
+.Output{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #D3D3D3;
+border-width: 1px;
+	border-color: #002288;}
+.HeaderEmphasis{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-style: italic;
+}
+.NoteContent{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.Graph{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+border-width: 1px;
+	border-color: #002288;}
+.WarnContentFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.NoteBanner{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.FatalContent{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.DataStrong{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #000000;
+	background-color: #FCFAE5;
+	font-weight: bold;
+}
+.Document{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+a:link{
+}
+a:visited{
+}
+a:active{
+}
+.BeforeCaption{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #000000;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.ContentsDate{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	width: 100%;
+}
+.Pages{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	margin-right: 8px;
+	margin-left: 8px;
+	list-style-type: decimal;
+}
+.TitlesAndFooters{
+	font-family: arial,helvetica,sans-serif;
+	font-size: medium;
+	color: #002288;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.IndexProcName{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	list-style-type: decimal;
+}
+.ProcTitle{
+	font-family: arial,helvetica,sans-serif;
+	font-size: medium;
+	color: #002288;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.Table{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #D3D3D3;
+border-width: 1px;
+	border-color: #002288;}
+.top_stacked_value{
+	padding-bottom: 1px;
+}
+.middle_stacked_value{
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+.bottom_stacked_value{
+	padding-top: 1px;
+}
+.IndexAction{
+	color: #0033AA;
+	background-color: #EFE5E0;
+	margin-left: 6pt;
+	list-style-type: none;
+}
+.Data{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #000000;
+	background-color: #FCFAE5;
+}
+.FooterEmpty{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.SysTitleAndFooterContainer{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+border-width: 0;	width: 100%;
+}
+.Container{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.Date{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	width: 100%;
+}
+.RowFooterEmpty{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.ExtendedPage{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+	font-style: italic;
+	text-align: center;
+border-width: 1pt;}
+.RowFooterStrongFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: x-small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.RowFooterEmphasis{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-style: italic;
+}
+.RowFooterFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+}
+.Index{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+}
+.Caption{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #000000;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.Frame{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.FooterFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+}
+.Note{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.HeaderStrongFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: x-small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.IndexTitle{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #002288;
+	font-style: italic;
+}
+.PagesProcLabel{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	list-style-type: decimal;
+}
+.NoteContentFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.DataEmphasisFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #000000;
+	background-color: #FCFAE5;
+	font-style: italic;
+}
+.WarnBanner{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.ByContentFolder{
+	color: #0033AA;
+	background-color: #EFE5E0;
+	list-style-type: none;
+}
+.ProcTitleFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: x-small;
+	color: #002288;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.FatalBanner{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.RowHeaderFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #004477;
+	background-color: #EFE5E0;
+}
+.RowFooterEmphasisFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-style: italic;
+}
+.PagesDate{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	width: 100%;
+}
+.WarnContent{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.DataEmpty{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #000000;
+	background-color: #FCFAE5;
+}
+.Cell{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.Body{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+	margin-right: 8px;
+	margin-left: 8px;
+}
+.Header{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.PageNo{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+	font-weight: bold;
+	vertical-align: top;
+	text-align: right;
+}
+.RowHeaderEmpty{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #004477;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.HeaderFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+}
+.ContentItem{
+	color: #0033AA;
+	background-color: #EFE5E0;
+	list-style-type: none;
+}
+.Batch{
+	font-family: 'sas monospace','courier new',courier,monospace;
+	font-size: x-small;
+	color: #000000;
+	background-color: #FCFAE5;
+border-width: 1px;
+	border-color: #002288;}
+.PagesProcName{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	list-style-type: decimal;
+}
+.PagesTitle{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #002288;
+	font-style: italic;
+}
+.ContentProcLabel{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	list-style-type: decimal;
+}
+.Byline{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #004477;
+	background-color: #FFFFFF;
+	font-weight: bold;
+	text-align: left;
+}
+.ContentFolder{
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.HeaderEmpty{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.FooterStrong{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.FooterEmphasis{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-style: italic;
+}
+.ErrorContent{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.DataFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #000000;
+	background-color: #D3D3D3;
+}
+.HeaderStrong{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.DataEmphasis{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #000000;
+	background-color: #FCFAE5;
+	font-style: italic;
+}
+.TitleAndNoteContainer{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+border-width: 0;	width: 100%;
+}
+.BylineContainer{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+border-width: 0;	width: 100%;
+}
+.FatalContentFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.Contents{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	margin-right: 8px;
+	margin-left: 8px;
+	list-style-type: decimal;
+}
+.RowFooter{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.IndexItem{
+	color: #0033AA;
+	background-color: #EFE5E0;
+	margin-left: 6pt;
+	list-style-type: none;
+}
+.BodyDate{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+	vertical-align: top;
+	text-align: right;
+	width: 100%;
+}
+.FooterEmphasisFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-style: italic;
+}
+.RowFooterStrong{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.HeadersAndFooters{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.RowHeaderStrong{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #004477;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.RowHeaderEmphasisFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #004477;
+	background-color: #EFE5E0;
+	font-style: italic;
+}
+.ErrorBanner{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.ContentProcName{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	list-style-type: decimal;
+}
+.UserText{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.PagesItem{
+	color: #0033AA;
+	background-color: #EFE5E0;
+	list-style-type: none;
+}
+.RowHeader{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #004477;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.FooterStrongFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: x-small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.AfterCaption{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #000000;
+	background-color: #FFFFFF;
+	font-weight: bold;
+}
+.RowHeaderStrongFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: x-small;
+	color: #004477;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.SystemFooter{
+	font-family: arial,helvetica,sans-serif;
+	font-size: large;
+	color: #002288;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.RowHeaderEmphasis{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #004477;
+	background-color: #EFE5E0;
+	font-style: italic;
+}
+.Footer{
+	font-family: arial,helvetica,sans-serif;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-weight: bold;
+}
+.FolderAction{
+	color: #0033AA;
+	background-color: #EFE5E0;
+	margin-left: 6pt;
+	list-style-type: none;
+}
+.HeaderEmphasisFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #0033AA;
+	background-color: #EFE5E0;
+	font-style: italic;
+}
+.SystemTitle{
+	font-family: arial,helvetica,sans-serif;
+	font-size: large;
+	color: #002288;
+	background-color: #FFFFFF;
+	font-style: italic;
+	font-weight: bold;
+}
+.ErrorContentFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: small;
+	color: #002288;
+	background-color: #FFFFFF;
+}
+.DataStrongFixed{
+	font-family: 'courier new',courier,monospace;
+	font-size: x-small;
+	color: #000000;
+	background-color: #FCFAE5;
+	font-weight: bold;
+}

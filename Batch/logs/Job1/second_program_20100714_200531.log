@@ -1,0 +1,129 @@
+NOTE: Log file opened at Thu, 15 Jul 2010 17:11:49.607
+1                                                    The SAS System                        17:11 Thursday, July 15, 2010
+
+NOTE: Unable to open SASUSER.PROFILE. WORK.PROFILE will be opened instead.
+NOTE: All profile changes will be lost at the end of the session.
+NOTE: Copyright (c) 2002-2008 by SAS Institute Inc., Cary, NC, USA. 
+NOTE: SAS (r) Proprietary Software 9.2 (TS2M2) 
+      Licensed to SCORPIO SOFTWARE SERVICES, Site 10003143.
+NOTE: This session is executing on the W32_VSPRO  platform.
+
+
+
+NOTE: SAS initialization used:
+      real time           0.20 seconds
+      cpu time            0.06 seconds
+      
+1          /******************************************************************************************
+2          **                                                                                       **
+3          **                                                                                       **
+4          **                                                                                       **
+5          **                                                                                       **
+6          ******************************************************************************************/
+7          
+8          %let env = %scan(&sysparm, 1, %str(:));
+9          
+10         %macro parse_parms;
+11           %global sysparm;
+12         
+13           %let i = 2;
+14         
+15           %let pair = %scan(&sysparm, &i, %str(:));
+16         
+17           %do %while (%str(&pair) ne %str());
+18             %let var_name = %scan(&pair, 1, %str(=));
+19         	%let var_value = %substr(&pair, (1 + %index(&pair, %str(=))));
+20         	
+21             %global &var_name;
+22         	%let &var_name=&var_value;
+23         	%let i = %eval(&i + 1);
+24         	%let pair = %scan(&sysparm, &i, %str(:));
+25           %end;
+26         
+27         %mend parse_parms;
+28         
+29         %parse_parms;
+30         
+31         data _null_;
+32           set sashelp.vmacro end=eof;
+33           where scope eq         'GLOBAL' and
+34                 name  contains   '_'      and
+35         		name  not eq: 'SQL'       and
+36         		name  not eq: 'SYS';
+37           if _n_ eq 1 then put '**************** User macro variables ****************';
+38           put name '= ' value;
+39           if eof then put '******************************************************';
+40         run;
+
+**************** User macro variables ****************
+JOB_NAME = Job1
+DATE_STAMP = 20100714_200531
+******************************************************
+2                                                    The SAS System                        17:11 Thursday, July 15, 2010
+
+NOTE: There were 2 observations read from the data set SASHELP.VMACRO.
+      WHERE (scope='GLOBAL') and name contains '_' and (name not =: 'SQL') and (name not =: 'SYS');
+NOTE: DATA statement used (Total process time):
+      real time           0.01 seconds
+      cpu time            0.01 seconds
+      
+
+41         
+42         * Include initialisation code;
+43         * %include "...../demo_init.sasinc";
+44         
+45         * Print macro variables;
+46         * %print_macro_vars(inc_text=%str(_));
+47         
+48         * Output HTML PDF;
+49         filename htmlfile "reports\&job_name\first_program_&date_stamp..html";
+50         filename pdffile  "reports\&job_name\first_program_&date_stamp..pdf";
+51         
+52         * Assign library;
+53         libname job1lib "sasdata\&job_name";
+NOTE: Libref JOB1LIB was successfully assigned as follows: 
+      Engine:        V9 
+      Physical Name: D:\Batch\sasdata\Job1
+54         
+55         
+56         options orientation=landscape;
+57         
+58         ods listing close;
+59         ods markup  file=htmlfile (title="Test Job")
+60                     style=sasweb
+61         		    tagset=tagsets.xhtml;
+NOTE: Writing MARKUP Body file: HTMLFILE
+62         ods printer pdf file=pdffile
+63                     style=sasweb
+64         			notoc;
+NOTE: Writing ODS PRINTER output to DISK destination "PDFFILE", printer "PDF".
+65         
+66         proc report nowd data=sashelp.class;
+67           column sex height weight;
+68           define sex / display;
+3                                                              The SAS System                                  17:11 Thursday, July 15, 2010
+
+69           define height / display;
+70           define weight / display;
+71         run;
+
+NOTE: There were 19 observations read from the data set SASHELP.CLASS.
+NOTE: PROCEDURE REPORT used (Total process time):
+      real time           0.10 seconds
+      cpu time            0.01 seconds
+      
+
+72         
+73         ods printer close;
+NOTE: ODS PRINTER printed 1 page to D:\Batch\reports\Job1\first_program_20100714_200531.pdf.
+74         ods markup close;
+75         ods listing;
+76         
+
+NOTE: SAS Institute Inc., SAS Campus Drive, Cary, NC USA 27513-2414
+NOTE: The SAS System used:
+      real time           0.95 seconds
+      cpu time            0.28 seconds
+      
+
+
