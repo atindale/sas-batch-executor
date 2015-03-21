@@ -69,12 +69,14 @@ Job1\second_program.sas
 
 The values for the SCHEDULE keyword are:
 
-AM/PM         | Morning or afternoon
-DAILY         | Daily
-DAILY_BD      | Daily on business days
-WEEKLY_1      | Weekly on the first day of the week
-MONTHLY_1     | Monthly on the nth day of the week
-MONTHLYBD_1   | Monthly on business day n
+| Parameter     | Meaning |
+| --- | --- |
+| AM/PM         | Morning or afternoon | 
+| DAILY         | Daily | 
+| DAILY_BD      | Daily on business days | 
+| WEEKLY_1      | Weekly on the first day of the week |
+| MONTHLY_1     | Monthly on the nth day of the week |
+| MONTHLYBD_1   | Monthly on business day n |
 
 ## To Do
 1.	Add a sasautos/format/autoexec location
