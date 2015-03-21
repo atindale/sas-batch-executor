@@ -55,9 +55,11 @@ Batch
 ## Process
 
 `run_jobs.sas` is executed every day, when the a marker file is created.
-1.	Directory list of parms directory which should contain a file for each “flow”
-a.	Job1.mail
-b.	Job1.run
+
+Directory list of parms directory which should contain a file for each “flow”
+
+- Job1.mail
+- Job1.run
 
 The `run` parameter file should contain:
 
@@ -87,3 +89,7 @@ The values for the `SCHEDULE` keyword are:
 4.	Refine output styling process and document
 
 ## Further Enhancements
+
+1. Have some process for adding a flow and creating a directory (make?)
+
+
