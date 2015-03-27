@@ -2,9 +2,9 @@
 
 ## Overview
 
-This application spawned from the need for analysts who use SAS to have code execute analysis code on a regular automated basis without the need to go to IT or login to the server.
+This application spawned from the need for analysts who use SAS to have code execute on a regular automated basis without the need to go to IT or login to the server.
 
-It does **not** replace a complex schedule of dependancies but allows very simple time based execution sequential scheduling of jobs.
+It does **not** replace a complex schedule of dependancies but allows very simple time-based sequential execution   of jobs.
 
 ## Grabbing this application
 
@@ -54,9 +54,11 @@ Batch
 
 ## Process
 
-`run_jobs.sas` is executed every day, when the a marker file is created.
+The job `run_jobs.sas` should be scheduled to execute in the morning and afternoon each day. This should be done using whatever scheduling tool is available, such as the built-in Windows Task Scheduler or Cron.
 
-Directory list of parms directory which should contain a file for each “flow”
+The `Batch` directory should be exposed via a file share so that end users can drop their code in it.
+
+The parms directory which should contain two files for each “flow”:
 
 - Job1.mail
 - Job1.run
