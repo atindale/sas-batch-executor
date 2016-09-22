@@ -1,2 +1,4 @@
 # Mac artefacts
 .DS_Store
+
+*.log
