@@ -1,5 +1,13 @@
 /******************************************************************************
 **                                                                           **
+** Allocate libraries.                                                       **
+**                                                                           **
+******************************************************************************/
+
+libname cntl 'D:\Batch\sasdata\Control';
+
+/******************************************************************************
+**                                                                           **
 ** Read the run parameter file for each flow.                                **
 **                                                                           **
 ******************************************************************************/
@@ -10,7 +18,7 @@ data a;
     attrib jobname length=$100;
     infile in_cmd length=len;
     input jobname $varying. len;
-    filename = 'D:\Batch\parms\' || jobname;
+    parm_filename = 'D:\Batch\parms\' || jobname;
 run;
 
 /******************************************************************************
@@ -22,7 +30,7 @@ run;
 data b;
     attrib progname length=$100;
     set a;
-    infile in_cmd length=len filevar=filename filename=myinfile end=done;
+    infile in_cmd length=len filevar=parm_filename filename=myinfile end=done;
     do while (not done);
         input progname $varying. len;
         if progname eq: 'SCHEDULE' then do;
@@ -64,9 +72,9 @@ run;
 %find_bus_day(5)
 
 proc sql noprint;
-    select business_day_of_month, business_day_flag into :business_day_of_month, :business_day_flag
-    from   biaplat.dmr_calendar
-    where  datepart(calendar_date) eq date();
+    select qld_business_day_of_month, qld_business_day_flag into :business_day_of_month, :business_day_flag
+    from   cntl.dim_date
+    where  calendar_date eq date();
 quit;
 
 %let business_day_of_month=&business_day_of_month;
@@ -81,19 +89,20 @@ quit;
 **                                                                           **
 ** Values for the SCHEDULE keyword are:                                      **
 **                                                                           **
-**   DAILY                                                                   **
-**   DAILY_BD                                                                **
-**   WEEKLY_1                                                                **
-**   MONTHLY_1                                                               **
-**   MONTHLYBD_1                                                             **
+**   DAILY                  Daily.                                           **
+**   DAILY_BD               Daily on business days.                          **
+**   WEEKLY_1               Weekly on first day of the week where day 1      **
+**                          is Monday.                                       **
+**   MONTHLY_1              Monthly on the first day of the month.           **
+**   MONTHLYBD_1            Monthly on first business day of month.          **
 **                                                                           **
 ******************************************************************************/
 
 data c;
     set b;
 
-    sched = scan(schedule,1,'_');
-    freq  = scan(schedule,2,'_');
+    sched = scan(schedule, 1, '_');
+    freq  = scan(schedule, 2, '_');
 
     willdo = 'N';
 
@@ -102,13 +111,13 @@ data c;
     select (sched);
         when ('DAILY') do;
             if freq eq 'BD' and "&business_day_flag" eq 'Y' or
-            freq eq ''                                   then willdo = 'Y';
+               freq eq ''                                   then willdo = 'Y';
         end;
         when ('WEEKLY') do;
-            if weekday(date()) eq input(freq, best.) then willdo = 'Y';
+            if weekday(date())    eq input(freq, best.)     then willdo = 'Y';
         end;
         when ('MONTHLY') do;
-            if day(date()) eq input(freq, best.) then willdo = 'Y';
+            if day(date())        eq input(freq, best.)     then willdo = 'Y';
         end;
         when ('MONTHLYBD') do;
             if input(freq, best.) eq &business_day_of_month then willdo = 'Y';
@@ -117,7 +126,7 @@ data c;
     end;
 
     ** Keep only those programs that we need to run now. **;
-    if willdo eq 'Y';
+    * if willdo eq 'Y';
 run;
 
 /******************************************************************************
@@ -129,11 +138,11 @@ run;
 
 filename outfile 'D:\Batch\system\run_jobs.bat';
   
-data c;
+data d;
     retain date_stamp;
     attrib runline length=$500;
     file outfile lrecl=1000;
-    set b end=eof;
+    set c end=eof;
     if _n_ eq 1 then date_stamp = catx('_', put(date(), yymmddn8.), compress(put(time(), time8.), ':'));
 
     job = scan(jobname, 1, '.');
@@ -159,5 +168,7 @@ run;
 ** Finally run the created batch script.                                     **
 **                                                                           **
 ******************************************************************************/
+
+options noxwait;
 
 x "D:\Batch\system\run_jobs.bat";

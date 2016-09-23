@@ -52,6 +52,12 @@ Batch
  └── sasv9.cfg
 ```
 
+## Configuring
+
+Depending on your environment you will need to change the following:
+
+- Location of SAS executable in start_sas.bat
+
 ## Process
 
 The job `run_jobs.sas` should be scheduled to execute in the morning and afternoon each day. This should be done using whatever scheduling tool is available, such as the built-in Windows Task Scheduler or Cron.
@@ -77,9 +83,9 @@ The values for the `SCHEDULE` keyword are:
 
 | Parameter     | Meaning |
 | --- | --- |
-| AM/PM         | Morning or afternoon | 
-| DAILY         | Daily | 
-| DAILY_BD      | Daily on business days | 
+| AM/PM         | Morning or afternoon |
+| DAILY         | Daily |
+| DAILY_BD      | Daily on business days |
 | WEEKLY_1      | Weekly on the first day of the week |
 | MONTHLY_1     | Monthly on the nth day of the week |
 | MONTHLYBD_1   | Monthly on business day n |
@@ -93,5 +99,3 @@ The values for the `SCHEDULE` keyword are:
 ## Further Enhancements
 
 1. Have some process for adding a flow and creating a directory (make?)
-
-

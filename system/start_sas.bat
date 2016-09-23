@@ -1,6 +1,6 @@
 D:
 cd D:\Batch
 
-"C:\SAS\Programs\SASFoundation\9.2(32-bit)\sas.exe" %*%
+"D:\SAS\Software\SASFoundation\9.3\sas.exe" %*%
 
 exit
